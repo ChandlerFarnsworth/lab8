@@ -1,4 +1,7 @@
 @charset "utf-8";
+/* CSS Document */
+
+/* || General setup */
 
 html, body {
   margin: 0;
@@ -15,6 +18,8 @@ body {
   min-width: 800px;
   margin: 0 auto;
 }
+
+/* || typography */
 
 h1, h2, h3 {
   font-family: 'Cinzel Decorative', cursive;
@@ -46,10 +51,13 @@ p, li {
   line-height: 1.5;
 }
 
+/* || header layout */
+
 header {
   margin-bottom: 10px;
   display: flex;
   flex-flow: row wrap;
+  flex: 100%; /* FIX: makes header span full width of flex-container */
 }
 
 body > * {
@@ -103,6 +111,12 @@ nav a, nav span {
 
 }
 
+/* || main layout */
+
+main {
+  display: flex; /* FIX: uncommented so article and aside sit side by side */
+}
+
 article, section {
   flex: 4;
 }
@@ -125,14 +139,17 @@ aside img {
 
 footer {
   margin-top: 10px;
+  flex: 100%; /* FIX: makes footer span full width of flex-container */
 }
+
+/* HK additions */
 
 main {
   flex: 3;
 }
 
 .flex-container {
-  background-color: rgba(0, 255, 0, 0.5);
+  background-color: rgba(0, 255, 0, 0.5); /* FIX: changed from red */
   padding: 1%;
   display: flex;
   flex-wrap: wrap;
